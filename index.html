@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENG - Kompleksowe rozwiązania paliwowe | Fuel Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header" id="mainHeader">
+        <div class="container header-wrap">
+            <a href="#" class="logo">ENG</a>
+
+            <button class="burger" onclick="toggleMenu()">☰</button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#about" onclick="toggleMenu()">
+                    <span class="pl-text">O nas</span><span class="en-text">About us</span>
+                </a>
+                <a href="#services" onclick="toggleMenu()">
+                    <span class="pl-text">Usługi</span><span class="en-text">Services</span>
+                </a>
+                <a href="#advantages" onclick="toggleMenu()">
+                    <span class="pl-text">Dlaczego my</span><span class="en-text">Why us</span>
+                </a>
+                <a href="#contact" onclick="toggleMenu()">
+                    <span class="pl-text">Kontakt</span><span class="en-text">Contact</span>
+                </a>
+
+                <div class="lang-switcher">
+                    <button class="lang-btn active" onclick="changeLang('pl')" id="btn-pl">PL</button>
+                    <button class="lang-btn" onclick="changeLang('en')" id="btn-en">EN</button>
+                </div>
+            </nav>
+
+            <a href="tel:+48111222333" class="desktop-phone">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                </svg>
+                +48 111 222 333
+            </a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1 class="reveal">
+                <span class="pl-text">Kompleksowe dostawy <br><span>paliw dla biznesu</span></span>
+                <span class="en-text">Comprehensive fuel <br><span>supply for business</span></span>
+            </h1>
+            <div class="hero-tags reveal" style="transition-delay: 0.2s;">
+                <div class="tag"><span class="pl-text">✓ Najwyższa jakość</span><span class="en-text">✓ Premium quality</span></div>
+                <div class="tag"><span class="pl-text">✓ Szybka dostawa</span><span class="en-text">✓ Fast delivery</span></div>
+                <div class="tag"><span class="pl-text">✓ Konkurencyjne ceny</span><span class="en-text">✓ Best prices</span></div>
+            </div>
+            <a href="#contact" class="btn btn-primary reveal" style="transition-delay: 0.4s;">
+                <span class="pl-text">Odbierz wycenę</span><span class="en-text">Get a quote</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <div class="container about-grid">
+            <div class="about-image reveal">
+                <img src="npz.png" alt="O firmie ENG">
+            </div>
+
+            <div class="about-content reveal" style="transition-delay: 0.2s;">
+                <h2 class="about-title">
+                    <span class="pl-text">O NAS</span>
+                    <span class="en-text">ABOUT US</span>
+                </h2>
+                <p class="about-lead">
+                    <span class="pl-text">Spółka z ograniczoną odpowiedzialnością "ENG" została założona w 2012 roku.</span>
+                    <span class="en-text">The limited liability company "ENG" was established in 2012.</span>
+                </p>
+                <p class="about-desc">
+                    <span class="pl-text">Głównym profilem naszej działalności jest hurtowa i detaliczna sprzedaż produktów naftowych: ON, Benzyna Pb92 Pb95, Nafta (Kerozyna), Asfalt drogowy, Olej opałowy ciężki na terenie Polski i Unii Europejskiej.</span>
+                    <span class="en-text">The main activity of our company is the wholesale and retail sale of petroleum products: Diesel, Petrol Pb92 Pb95, Kerosene, Road Bitumen, Heavy Heating Oil in Poland and the European Union.</span>
+                </p>
+                <p class="about-desc">
+                    <span class="pl-text">W trakcie naszej działalności nawiązaliśmy i ugruntowaliśmy partnerskie kontakty biznesowe z wieloma przedsiębiorstwami, a także w pełni zorganizowaliśmy własną logistykę transportową.</span>
+                    <span class="en-text">During our operation, we have developed and established business partnerships with many enterprises, and also fully set up our own transport logistics.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section products bg-cards-dark">
+        <div class="container">
+            <h2 class="title text-white reveal">
+                <span class="pl-text">NASZE PRODUKTY</span>
+                <span class="en-text">OUR PRODUCTS</span>
+            </h2>
+
+            <div class="products-grid">
+                <div class="product-card reveal">
+                    <div class="card-img-wrap"><div class="card-img" style="background-image: url('benz.jpg');"></div></div>
+                    <div class="card-body">
+                        <h3>
+                            <span class="pl-text">Benzyna Pb92, Pb95</span>
+                            <span class="en-text">Petrol Pb92, Pb95</span>
+                        </h3>
+                        <a href="#contact" class="link-btn">
+                            <span class="pl-text">Sprawdź cenę</span><span class="en-text">Check price</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" style="transition-delay: 0.1s;">
+                    <div class="card-img-wrap"><div class="card-img" style="background-image: url('Diesel.jpg');"></div></div>
+                    <div class="card-body">
+                        <h3>
+                            <span class="pl-text">Olej napędowy (ON)</span>
+                            <span class="en-text">Diesel Fuel</span>
+                        </h3>
+                        <a href="#contact" class="link-btn">
+                            <span class="pl-text">Sprawdź cenę</span><span class="en-text">Check price</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" style="transition-delay: 0.2s;">
+                    <div class="card-img-wrap"><div class="card-img" style="background-image: url('bitum.png');"></div></div>
+                    <div class="card-body">
+                        <h3>
+                            <span class="pl-text">Asfalt drogowy</span>
+                            <span class="en-text">Road Bitumen</span>
+                        </h3>
+                        <a href="#contact" class="link-btn">
+                            <span class="pl-text">Sprawdź cenę</span><span class="en-text">Check price</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" style="transition-delay: 0.3s;">
+                    <div class="card-img-wrap"><div class="card-img" style="background-image: url('mazut.jpg');"></div></div>
+                    <div class="card-body">
+                        <h3>
+                            <span class="pl-text">Olej opałowy ciężki</span>
+                            <span class="en-text">Heavy Heating Oil</span>
+                        </h3>
+                        <a href="#contact" class="link-btn">
+                            <span class="pl-text">Sprawdź cenę</span><span class="en-text">Check price</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card reveal">
+                    <div class="card-img-wrap"><div class="card-img" style="background-image: url('pechnoe.jpg');"></div></div>
+                    <div class="card-body">
+                        <h3>
+                            <span class="pl-text">Paliwo opałowe</span>
+                            <span class="en-text">Heating Fuel</span>
+                        </h3>
+                        <a href="#contact" class="link-btn">
+                            <span class="pl-text">Sprawdź cenę</span><span class="en-text">Check price</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" style="transition-delay: 0.1s;">
+                    <div class="card-img-wrap"><div class="card-img" style="background-image: url('cerosin.jpg');"></div></div>
+                    <div class="card-body">
+                        <h3>
+                            <span class="pl-text">Nafta (Kerozyna)</span>
+                            <span class="en-text">Kerosene</span>
+                        </h3>
+                        <a href="#contact" class="link-btn">
+                            <span class="pl-text">Sprawdź cenę</span><span class="en-text">Check price</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" style="transition-delay: 0.2s;">
+                    <div class="card-img-wrap"><div class="card-img" style="background-image: url('logistica.jpg');"></div></div>
+                    <div class="card-body">
+                        <h3>
+                            <span class="pl-text">Usługi logistyczne:<br>Auto, Kolej</span>
+                            <span class="en-text">Logistics services:<br>Auto, Rail</span>
+                        </h3>
+                        <a href="#contact" class="link-btn">
+                            <span class="pl-text">Sprawdź cenę</span><span class="en-text">Check price</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card special-card reveal" style="transition-delay: 0.3s;">
+                    <div class="card-img" style="background-image: url('zavod.jpg');"></div>
+                    <div class="special-overlay">
+                        <span class="pl-text"><strong>Rafinerie:</strong><br>PNHZ, ANHZ,<br>PKOP, mini-rafinerie</span>
+                        <span class="en-text"><strong>Refineries:</strong><br>PNHZ, ANHZ,<br>PKOP, mini-refineries</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="advantages" class="section advantages">
+        <div class="container">
+            <h2 class="title reveal">
+                <span class="pl-text">DLACZEGO MY?</span>
+                <span class="en-text">WHY US?</span>
+            </h2>
+
+            <div class="adv-grid-new">
+                <div class="adv-card reveal">
+                    <div class="adv-icon-wrap">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="12" height="14" rx="2" ry="2"></rect>
+                            <path d="M15 7h4l3 5v5h-3"></path>
+                            <circle cx="6" cy="17" r="2"></circle>
+                            <circle cx="18" cy="17" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h4>
+                        <span class="pl-text">Bezpośrednie dostawy<br>od producentów</span>
+                        <span class="en-text">Direct supplies<br>from manufacturers</span>
+                    </h4>
+                    <p>
+                        <span class="pl-text">Pracujemy bez pośredników — to zapewnia stabilne ceny i wysoką jakość paliwa.</span>
+                        <span class="en-text">We work without intermediaries — this ensures stable prices and high fuel quality.</span>
+                    </p>
+                </div>
+
+                <div class="adv-card reveal" style="transition-delay: 0.1s;">
+                    <div class="adv-icon-wrap">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                            <path d="M9 14l2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <h4>
+                        <span class="pl-text">Gwarantowana<br>jakość</span>
+                        <span class="en-text">Guaranteed<br>quality</span>
+                    </h4>
+                    <p>
+                        <span class="pl-text">Każda partia posiada certyfikat. Wszystkie paliwa spełniają europejskie normy jakości.</span>
+                        <span class="en-text">Every batch is certified. All fuels strictly meet European quality standards.</span>
+                    </p>
+                </div>
+
+                <div class="adv-card reveal" style="transition-delay: 0.2s;">
+                    <div class="adv-icon-wrap">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="13" r="8"></circle>
+                            <path d="M12 9v4l2 2"></path>
+                            <path d="M10 2h4"></path>
+                        </svg>
+                    </div>
+                    <h4>
+                        <span class="pl-text">Szybka i niezawodna<br>dostawa</span>
+                        <span class="en-text">Fast and reliable<br>delivery</span>
+                    </h4>
+                    <p>
+                        <span class="pl-text">Własna flota logistyczna pozwala na dostarczenie paliwa dokładnie na czas.</span>
+                        <span class="en-text">Our own transport fleet and logistics allow us to deliver fuel exactly on time.</span>
+                    </p>
+                </div>
+
+                <div class="adv-card reveal" style="transition-delay: 0.3s;">
+                    <div class="adv-icon-wrap">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+                        </svg>
+                    </div>
+                    <h4>
+                        <span class="pl-text">Doświadczenie<br>i zaufanie</span>
+                        <span class="en-text">Experience<br>and trust</span>
+                    </h4>
+                    <p>
+                        <span class="pl-text">Wybierają nas rolnicy, kopalnie i firmy logistyczne. Ponad 10 lat w branży.</span>
+                        <span class="en-text">Chosen by farmers, mines, and logistics companies. Over 10 years in the industry.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-new">
+
+        <div class="container form-container reveal">
+            <div class="form-header">
+                <h2 class="form-title">
+                    <span class="pl-text">SKONTAKTUJ SIĘ Z NAMI</span>
+                    <span class="en-text">CONTACT US</span>
+                </h2>
+                <p class="form-subtitle">
+                    <span class="pl-text">Skontaktujemy się z Tobą i doradzimy we wszystkich kwestiach.</span>
+                    <span class="en-text">We will contact you and consult you on all questions.</span>
+                </p>
+            </div>
+
+            <form id="leadForm" action="#" method="POST" class="modern-form">
+                <div class="form-row form-row-2">
+                    <input type="text" id="input-name" placeholder="Twoje Imię" required>
+
+                    <div class="phone-wrapper">
+                        <div class="flag-placeholder">🇵🇱 +48</div>
+                        <input type="tel" id="input-phone" placeholder="(000) 000-000" required maxlength="9">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <input type="text" id="input-interest" placeholder="Czym jesteś zainteresowany?" required>
+                </div>
+
+                <div class="form-row form-footer-row">
+                    <div class="consent-text">
+                        <span class="pl-text">Klikając przycisk wyślij, wyrażasz zgodę na przetwarzanie swoich danych osobowych i akceptujesz <a href="#">politykę prywatności</a>.</span>
+                        <span class="en-text">By clicking the send button, you consent to the processing of your personal data and agree to the <a href="#">privacy policy</a>.</span>
+                    </div>
+                    <button type="submit" id="submit-btn" class="btn-submit-gold">
+                        <span class="pl-text">Uzyskaj konsultację</span>
+                        <span class="en-text">Get consultation</span>
+                    </button>
+                </div>
+
+                <p id="phone-error" class="form-msg error-msg">
+                    <span class="pl-text">Podaj poprawny 9-cyfrowy numer telefonu</span>
+                    <span class="en-text">Please enter a valid 9-digit phone number</span>
+                </p>
+                <p id="form-success" class="form-msg success-msg">
+                    <span class="pl-text">✓ Zapytanie zostało wysłane pomyślnie! Skontaktujemy się z Tobą.</span>
+                    <span class="en-text">✓ Request sent successfully! We will contact you soon.</span>
+                </p>
+            </form>
+        </div>
+
+        <div class="container alt-contact-container reveal">
+            <div class="alt-contact-header">
+                <h3>
+                    <span class="pl-text">Albo wybierz dogodny sposób kontaktu</span>
+                    <span class="en-text">Or choose a convenient way to contact us</span>
+                </h3>
+            </div>
+
+            <div class="alt-contact-grid">
+                <a href="tel:+48111222333" class="alt-contact-card">
+                    <div class="alt-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/>
+                        </svg>
+                    </div>
+                    <div class="alt-text">
+                        <span class="alt-label">
+                            <span class="pl-text">Numer kontaktowy</span>
+                            <span class="en-text">Contact number</span>
+                        </span>
+                        <span class="alt-value">+48 111 222 333</span>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/48111222333" class="alt-contact-card" target="_blank">
+                    <div class="alt-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                        </svg>
+                    </div>
+                    <div class="alt-text">
+                        <span class="alt-label">
+                            <span class="pl-text">Numer WhatsApp</span>
+                            <span class="en-text">WhatsApp number</span>
+                        </span>
+                        <span class="alt-value">+48 111 222 333</span>
+                    </div>
+                </a>
+
+                <a href="mailto:office@eng-fuel.pl" class="alt-contact-card">
+                    <div class="alt-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </div>
+                    <div class="alt-text">
+                        <span class="alt-label">
+                            <span class="pl-text">Napisz e-mail</span>
+                            <span class="en-text">Write an E-mail</span>
+                        </span>
+                        <span class="alt-value">office@eng-fuel.pl</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-wrap">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">ENG</a>
+                <p class="footer-text">
+                    <span class="pl-text">Kompleksowe rozwiązania paliwowe dla Twojego biznesu. Bezpośrednie dostawy, gwarancja jakości.</span>
+                    <span class="en-text">Comprehensive fuel solutions for your business. Direct supplies, quality guarantee.</span>
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4><span class="pl-text">Linki</span><span class="en-text">Links</span></h4>
+                <div class="footer-links">
+                    <a href="#about"><span class="pl-text">O nas</span><span class="en-text">About us</span></a>
+                    <a href="#services"><span class="pl-text">Usługi</span><span class="en-text">Services</span></a>
+                    <a href="#advantages"><span class="pl-text">Dlaczego my</span><span class="en-text">Why us</span></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4><span class="pl-text">Kontakt</span><span class="en-text">Contact</span></h4>
+                <div class="footer-links">
+                    <a href="tel:+48111222333">+48 111 222 333</a>
+                    <a href="mailto:office@eng-fuel.pl">office@eng-fuel.pl</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 ENG. <span class="pl-text">Wszelkie prawa zastrzeżone.</span><span class="en-text">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Мобильное меню
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('active');
+        }
+
+        // 2. Языки и placeholder'ы
+        function changeLang(lang) {
+            document.getElementById('btn-pl').classList.remove('active');
+            document.getElementById('btn-en').classList.remove('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+
+            if(lang === 'en') {
+                document.body.classList.add('lang-en');
+                document.getElementById('input-name').placeholder = "Your Name";
+                document.getElementById('input-phone').placeholder = "(000) 000-000";
+                document.getElementById('input-interest').placeholder = "What are you interested in?";
+            } else {
+                document.body.classList.remove('lang-en');
+                document.getElementById('input-name').placeholder = "Twoje Imię";
+                document.getElementById('input-phone').placeholder = "(000) 000-000";
+                document.getElementById('input-interest').placeholder = "Czym jesteś zainteresowany?";
+            }
+        }
+
+        // 3. Умная шапка
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // 4. Анимация появления (Scroll Reveal)
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 50;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+
+        // 5. Валидация формы и отправка
+        const phoneInput = document.getElementById('input-phone');
+        const phoneError = document.getElementById('phone-error');
+        const formSuccess = document.getElementById('form-success');
+        const leadForm = document.getElementById('leadForm');
+
+        // Разрешаем вводить ТОЛЬКО цифры
+        phoneInput.addEventListener('input', function (e) {
+            this.value = this.value.replace(/\D/g, '');
+            phoneError.style.display = 'none';
+            this.style.borderColor = 'transparent';
+        });
+
+        leadForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Проверяем 9 цифр (Польский формат)
+            if (phoneInput.value.length !== 9) {
+                phoneError.style.display = 'block';
+                phoneInput.style.borderColor = '#ff4d4d';
+                formSuccess.style.display = 'none';
+            } else {
+                phoneError.style.display = 'none';
+                phoneInput.style.borderColor = '#25D366';
+
+                formSuccess.style.display = 'block';
+
+                // Очистка формы
+                leadForm.reset();
+                setTimeout(() => { phoneInput.style.borderColor = 'transparent'; }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>

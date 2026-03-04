@@ -1,0 +1,575 @@
+/* =========================================
+   1. БАЗОВЫЕ НАСТРОЙКИ И ШРИФТЫ
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --accent: #F7931E;
+    --accent-hover: #e08418;
+    --dark: #111111;
+    --dark-alt: #1a1a1a;
+    --light-bg: #f4f4f4;
+    --text-main: #333333;
+    --text-muted: #777777;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: var(--white);
+    -webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+.section { padding: 120px 0; }
+.bg-light { background-color: var(--light-bg); }
+.bg-dark { background-color: var(--dark); color: var(--white); }
+
+/* =========================================
+   2. ТИПОГРАФИКА И КНОПКИ
+   ========================================= */
+.title {
+    font-size: 42px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--dark);
+}
+.bg-dark .title { color: var(--white); }
+
+.subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 60px;
+    font-weight: 500;
+}
+
+.btn {
+    display: inline-block;
+    padding: 18px 40px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--white);
+    box-shadow: 0 5px 15px rgba(247, 147, 30, 0.3);
+}
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(247, 147, 30, 0.4);
+}
+.block-btn { width: 100%; }
+
+/* Неактивная кнопка */
+button:disabled {
+    background-color: #555;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* =========================================
+   3. ШАПКА (HEADER) - ПРОЗРАЧНАЯ
+   ========================================= */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: transparent;
+    z-index: 1000;
+    padding: 25px 0;
+    transition: all 0.4s ease;
+}
+
+.header.scrolled {
+    background: rgba(34, 38, 53, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover { color: var(--accent); }
+
+.desktop-phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    padding: 10px 24px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.desktop-phone:hover {
+    border-color: var(--white);
+    background: rgba(255,255,255,0.1);
+}
+
+.lang-switcher {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+    align-items: center;
+    border-left: 1px solid rgba(255,255,255,0.2);
+    padding-left: 25px;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.5);
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lang-btn:hover { color: var(--white); }
+.lang-btn.active { color: var(--white); border-bottom: 2px solid var(--accent); }
+
+.mobile-phone, .burger { display: none; }
+
+/* =========================================
+   4. ГЛАВНЫЙ ЭКРАН (HERO)
+   ========================================= */
+.hero {
+    background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(17, 17, 17, 0.7)), url('main menu.jpg') center/cover no-repeat;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding-top: 80px;
+}
+.hero h1 { font-size: 60px; font-weight: 900; text-transform: uppercase; line-height: 1.1; margin-bottom: 30px; letter-spacing: 1px;}
+.hero h1 span { color: var(--accent); }
+.hero-tags { display: flex; justify-content: center; gap: 30px; margin-bottom: 50px; flex-wrap: wrap; }
+.tag { font-size: 18px; font-weight: 500; opacity: 0.9; }
+
+/* =========================================
+   5. О НАС (БЛОК С КАРТИНКОЙ)
+   ========================================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image { position: relative; z-index: 2; }
+.about-image img { width: 100%; height: auto; border-radius: 16px; display: block; position: relative; z-index: 2; }
+.about-image::before {
+    content: ''; position: absolute; bottom: -15px; left: -15px; width: 100%; height: 100%;
+    background-color: #fbbc05; border-radius: 16px; z-index: 1;
+}
+
+.about-content { text-align: left; }
+.about-title { font-size: 42px; font-weight: 800; margin-bottom: 25px; color: #1a233a; }
+.about-lead { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 20px; line-height: 1.5; }
+.about-desc { font-size: 16px; font-weight: 400; color: var(--text-muted); margin-bottom: 20px; line-height: 1.6; }
+
+/* =========================================
+   6. ПРОДУКТЫ
+   ========================================= */
+.bg-cards-dark { background-color: #222635; }
+.bg-cards-dark .title { color: var(--white); margin-bottom: 50px; }
+
+.products-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px;
+}
+
+.product-card {
+    background: var(--white); border-radius: 16px; overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); display: flex; flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
+.card-img-wrap { height: 200px; width: 100%; overflow: hidden; }
+.card-img {
+    width: 100%; height: 100%; background-color: #ddd; background-size: cover;
+    background-position: center; transition: transform 0.6s ease;
+}
+.product-card:hover .card-img { transform: scale(1.08); }
+.card-body {
+    padding: 25px 20px 30px; text-align: center; background-color: var(--white);
+    flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; align-items: center;
+}
+.card-body h3 { font-size: 18px; font-weight: 700; margin-bottom: 20px; color: var(--dark); line-height: 1.3; }
+
+.link-btn {
+    display: inline-block; color: #C8A02A; text-decoration: none; font-weight: 700;
+    font-size: 14px; padding: 10px 24px; border: 2px solid #C8A02A; border-radius: 6px;
+    transition: all 0.3s ease; margin-top: auto;
+}
+.link-btn:hover { background-color: #C8A02A; color: var(--white); box-shadow: 0 4px 10px rgba(200, 160, 42, 0.3); }
+
+.special-card { position: relative; display: block; min-height: 320px; }
+.special-card .card-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.special-card::after {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4); z-index: 2; transition: background 0.3s ease; pointer-events: none;
+}
+.special-card:hover::after { background: rgba(0, 0, 0, 0.6); }
+.special-overlay {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 90%; text-align: center; color: var(--white); z-index: 3; font-size: 18px; line-height: 1.5; font-weight: 600;
+}
+.special-overlay strong { font-size: 22px; font-weight: 900; display: block; margin-bottom: 8px; }
+
+/* =========================================
+   7. ПОЧЕМУ МЫ (ПРЕИМУЩЕСТВА)
+   ========================================= */
+.advantages { background-color: var(--white); padding: 120px 0; }
+.adv-grid-new { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 50px; }
+.adv-card {
+    background-color: #F4F5F9; border-radius: 16px; padding: 40px 25px;
+    text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.adv-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+.adv-icon-wrap {
+    width: 80px; height: 80px; background-color: var(--white); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+.adv-icon-wrap svg { width: 35px; height: 35px; stroke: #C8A02A; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.adv-card h4 { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 15px; line-height: 1.4; }
+.adv-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+/* =========================================
+   8. НОВАЯ ФОРМА КОНТАКТОВ (ИЗ МАКЕТА)
+   ========================================= */
+.contact-new {
+    background-color: var(--white);
+    padding: 120px 0;
+}
+
+.form-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.form-header {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.form-title {
+    font-size: 38px;
+    font-weight: 900;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.form-subtitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.4;
+}
+
+.modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    width: 100%;
+}
+
+.form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.modern-form input {
+    width: 100%;
+    padding: 20px 25px;
+    background-color: #f2f4f8;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.modern-form input:focus {
+    outline: none;
+    border-color: #d1d5e0;
+    background-color: #fff;
+}
+
+.phone-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.flag-placeholder {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.phone-wrapper input {
+    padding-left: 95px;
+}
+
+.form-footer-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.consent-text {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.consent-text a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.btn-submit-gold {
+    background-color: #f5cf47;
+    color: #111;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-submit-gold:hover {
+    background-color: #e3bc35;
+    transform: translateY(-2px);
+}
+
+.form-msg { display: none; }
+.error-msg { color: #ff4d4d; font-size: 13px; margin-top: -10px; text-align: left; padding-left: 5px; }
+.success-msg { color: #25D366; font-size: 16px; margin-top: 20px; text-align: center; font-weight: 600; }
+
+
+/* =========================================
+   8.1 АЛЬТЕРНАТИВНЫЕ КОНТАКТЫ (ИЛИ ВЫБЕРИТЕ УДОБНЫЙ СПОСОБ)
+   ========================================= */
+.alt-contact-container {
+    margin-top: 80px;
+}
+
+.alt-contact-header {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.alt-contact-header h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a1a2e;
+}
+
+.alt-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.alt-contact-card {
+    background-color: #f2f4f8; /* Такой же цвет как у полей формы */
+    border-radius: 16px;
+    padding: 30px 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    border-bottom: 5px solid #f5cf47; /* Желтая полоска снизу */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.alt-contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.alt-icon {
+    width: 40px;
+    height: 40px;
+    color: #f5cf47;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alt-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.alt-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.alt-label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.alt-value {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1a1a2e;
+}
+
+
+/* =========================================
+   9. ПОДВАЛ (FOOTER)
+   ========================================= */
+.footer {
+    background-color: #0b0d14;
+    padding-top: 80px;
+    color: var(--white);
+}
+.footer-wrap {
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; margin-bottom: 50px;
+}
+.footer-logo { display: inline-block; margin-bottom: 15px; font-size: 28px; }
+.footer-text { color: #888; font-size: 14px; line-height: 1.6; max-width: 300px; }
+.footer-col h4 { font-size: 16px; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+.footer-links { display: flex; flex-direction: column; gap: 12px; }
+.footer-links a { color: #888; text-decoration: none; font-size: 14px; transition: 0.3s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 25px 0; text-align: center; }
+.footer-bottom p { color: #666; font-size: 13px; }
+
+/* =========================================
+   10. ЯЗЫКИ И АНИМАЦИИ СКРОЛЛА
+   ========================================= */
+.en-text { display: none; }
+body.lang-en .pl-text { display: none; }
+body.lang-en .en-text { display: inherit; }
+
+.reveal {
+    opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out;
+}
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* =========================================
+   11. АДАПТИВНОСТЬ (МОБИЛЬНЫЕ УСТРОЙСТВА)
+   ========================================= */
+@media (max-width: 1024px) {
+    .section { padding: 80px 0; }
+    .hero h1 { font-size: 48px; }
+    .about-grid { grid-template-columns: 1fr; gap: 50px; }
+    .about-image { max-width: 600px; margin: 0 auto; }
+    .about-content { text-align: center; }
+    .products-grid, .adv-grid-new { grid-template-columns: repeat(2, 1fr); }
+
+    /* Адаптивность для карточек альтернативных контактов на планшете */
+    .alt-contact-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .header { padding: 15px 0; }
+    .desktop-phone, .lang-switcher { display: none; }
+    .burger { display: block; background: none; border: none; font-size: 30px; color: var(--white); cursor: pointer; }
+    .nav-menu { display: none; position: absolute; top: 65px; left: 0; width: 100%; background: rgba(34, 38, 53, 0.98); flex-direction: column; padding: 20px 0; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+    .nav-menu.active { display: flex; }
+    .lang-switcher { display: flex; border-left: none; padding-left: 0; margin: 15px 0 0 0; justify-content: center; }
+    .mobile-phone { display: block; margin-top: 15px; color: var(--accent) !important; font-size: 20px !important; }
+    .hero { padding-top: 100px; min-height: 500px; }
+    .hero h1 { font-size: 36px; }
+    .title { font-size: 32px; }
+    .products-grid, .adv-grid-new { grid-template-columns: 1fr; }
+
+    /* Форма контактов для телефона */
+    .form-row-2 { grid-template-columns: 1fr; }
+    .form-footer-row { grid-template-columns: 1fr; text-align: center; gap: 20px; }
+    .form-title { font-size: 28px; }
+    .form-subtitle { font-size: 18px; }
+    .consent-text { order: 2; text-align: center; }
+    .btn-submit-gold { width: 100%; order: 1; }
+
+    /* Футер для телефона */
+    .footer-wrap { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+    .footer-text { max-width: 100%; margin: 0 auto; }
+}
